@@ -1,9 +1,10 @@
 import consul
 
 from cloud.service_instance import ServiceInstance
+from cloud.serviceregistry.service_registry import ServiceRegistry
 
 
-class ConsulServiceRegistry:
+class ConsulServiceRegistry(ServiceRegistry):
     _consul = None
     _instance_id = None
 
@@ -30,3 +31,4 @@ class ConsulServiceRegistry:
         if self._instance_id:
             self._consul.agent.service.deregister(service_id=self._instance_id)
             self._instance_id = None
+
