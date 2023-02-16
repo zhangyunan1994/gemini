@@ -10,4 +10,4 @@ python-consul==1.1.0
 requests==2.25.0
 six==1.15.0
 urllib3==1.26.2
-Werkzeug==1.0.1
+Werkzeug==2.2.3
